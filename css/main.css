@@ -1,0 +1,13 @@
+
+.tei_p {text-indent: 50px; line-height: 200%;}
+#tei_file {font-family: "courier";color: #000000;}
+#tei_header {font-family: "arial";font-size: 70%;}
+.tei_title {text-decoration: underline; margin-top: 40px;}
+.tei_pb {text-align: center; margin:40px 0px 0px 0px;font-family: "arial";}
+.popover-content {text-indent: 0px;}
+
+@media (min-width: 768px){
+	.container {
+		width: 768px;
+	}
+}
