@@ -58,7 +58,7 @@
 							echo "<h4 class='tei_title'>";
 							break;
 						case "PERSNAME":
-							echo "<a tabindex='0' data-placement='auto top' data-toggle='popover' data-trigger='focus' data-container='body' title='Person Name' data-content='In future iterations of this viewer, the content in this popover would be dynamically generated from our Emmapedia resource. Ideally, the content would be summary information about this particular person.'>";
+							echo "<a tabindex='0' data-placement='auto top' data-toggle='popover' data-trigger='focus' data-container='body' title='Person Name' data-content='In future iterations of this viewer, the content in this popover will be dynamically generated from our Emmapedia resource.'>";
 							break;
 						case "PB":
 							echo "<p class='tei_pb'>--- Page break in the original document : See  <a href='../../eba_diary_content/eba_volume_19/" .  $element_attrs[N] . ".jpg'>original scan</a>";
