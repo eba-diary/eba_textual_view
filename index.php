@@ -30,7 +30,7 @@
 
       <div class="jumbotron">
         <h1>EBA Textual View</h1>
-        <p class="lead">This view of the diary is generated using the PHP Expat event based parser. The outputted HTML is then styled using the Bootstrap CSS library.</p>
+        <p class="lead">This view of the Volume 19 Diary XML is generated using the PHP Expat event based parser. The outputted HTML is then styled using the Bootstrap CSS library.</p>
       </div>
 
       <div class="row marketing">
@@ -46,10 +46,33 @@
 					function start($parser,$element_name,$element_attrs) {
 					  switch($element_name) {
 						case "P":
-							echo "<p class='tei_p'>";
+							echo "<p>";
 							break;
 						case "TEIHEADER":
 							echo "<div id='tei_header'>";
+							echo "<div class='panel-group' id='accordion' role='tablist' aria-multiselectable='true'>";
+							echo "<div class='panel panel-default'>";
+							echo "<div class='panel-heading' role='tab' id='headingOne'>";
+							echo "<h3 class='panel-title'>";
+							echo "<a data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>";
+							echo "TEI Header Information (click to expand)";
+							echo "</a>";
+							echo "</h3>";
+							echo "</div>";
+							echo "<div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne'>";
+							echo "<div class='panel-body'>";
+							break;
+						case "FILEDESC":
+
+							break;
+						case "ENCODINGDESC":
+
+							break;
+						case "PROFILEDESC":
+
+							break;
+						case "REVISIONDESC":
+
 							break;
 						case "LB":
 							echo "<br />";
@@ -64,6 +87,7 @@
 							echo "<p class='tei_pb'>--- Page break in the original document : See  <a href='../../eba_diary_content/eba_volume_19/" .  $element_attrs[N] . ".jpg'>original scan</a>";
 							break;
 						default:
+							echo "";
 						  
 					  };
 					};
@@ -76,6 +100,22 @@
 								break;
 							case "TEIHEADER":
 								echo "</div>";
+								echo "</div>";
+								echo '</div>';
+								echo '</div>';
+								echo '</div>';
+								break;
+							case "FILEDESC":
+
+								break;
+							case "ENCODINGDESC":
+
+								break;
+							case "PROFILEDESC":
+	
+								break;
+							case "REVISIONDESC":
+
 								break;
 							case "TITLE":
 								echo "</h4>";
@@ -84,9 +124,10 @@
 								echo "</a>";
 								break;
 							case "PB":
-								echo " ---</p>";
+								echo " ---</p><br />";
 								break;
 							default:
+								echo "";
 						};
 					};
 
@@ -131,7 +172,7 @@
       </div>
 
       <footer class="footer">
-        <p>Copyright &copy; 2014 Emma B. Andrews Diary Project. All Rights Reserved.</p>
+        <p>Copyright &copy; 2015 Emma B. Andrews Diary Project. All Rights Reserved.</p>
       </footer>
 
     </div> <!-- /container -->

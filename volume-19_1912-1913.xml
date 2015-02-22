@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE TEI
+SYSTEM 'http://www.tei-c.org/release/xml/tei/custom/schema/dtd/tei_all.dtd'>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sk="http://www.faculty.washington.edu/ketchley/ns/1.0" xml:lang="en">
+      
+   <!-- TO-DO LIST as of 1/16/15
+   - check P5 conformancy
+   - complete works cited
+   -->
+   
+	<teiHeader type="AACR2">
+		  <!--
+		  The type attribute in teiHeader element above asserts that the header provides 
+		  enough information to create a bibliographic record that complies with the 
+		  Anglo-American Cataloguing Rules, 2nd ed. (1978; rev. 1988).
+		  -->
+		  
+		<fileDesc>
+		  <!--
+		  The  file description, tagged <fileDesc>, contains "a full bibliographical description 
+		  of the computer file itself, from which a user of the text could derive a proper bibliographic 
+		  citation, or which a librarian or archivist could use in creating a catalogue entry recording 
+		  its presence within a library or archive" (TEI P4X, ch. 5).
+		  -->
+		  
+			<titleStmt>
+					<title>Emma B. Andrews, A Journal on the Bedawin 1889-1913</title>
+
+					<!-- 
+					List of the editors of the edition, using the form of name
+					that is used for professional publications.
+					 -->
+					<editor role="principal-editor"><persName ref="#SLK">Sarah L. Ketchley</persName></editor> 
+					
+					<!-- 
+					Statement of Responsibility supplies a statement of responsibility for the 
+					intellectual content of a text, edition, recording, or series, where the 
+					specialized elements for authors, editors, etc. do not suffice or do not apply.
+					 -->
+					<respStmt>
+					   <resp>Creation of digital documents from microfilm of manuscript pages</resp>
+					   <persName>Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Initial transcription of diaries into plain text format </resp>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					   <persName>Megan Tapp</persName>
+					   <persName>Ariella Fish</persName>
+					   <persName>Tessa Carter</persName>
+					   <persName>Janice Garr</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Proof-reading, editing and preparation of plain-text for 'Newbook Autotagger', debugging final script</resp>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					   <persName>Megan Tapp</persName>
+					   <persName>Ema Grey</persName>
+					   <persName>Tessa Carter</persName>
+					   <persName>Janice Garr</persName>
+					   <persName>Sarah Johnson</persName>
+					   <persName>Allison Skinner</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Encoding in TEI P5 </resp>
+					   <persName>Allison Skinner</persName>
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Development of prototype readers </resp>
+					   <persName>Chris Sumption</persName>      
+					</respStmt>
+					<respStmt>
+					   <resp>Biographical Research</resp>
+					   <persName>Sarah Johnson</persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Image Research</resp>
+						<persName>Chelsea Cooper</persName> 
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>Lindon Smith Diary Research</resp>
+					   <persName>Gabrielle Wilson </persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+						<resp>Case Holt Transcription</resp>
+						<persName>Janice Garr</persName>
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+					   <resp>XSL script develoment</resp>
+					   <persName>Pranav Shivanna </persName> 
+					   <persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+					<respStmt>
+						<resp>Javascript integration</resp>
+						<persName>Tony Le</persName>
+						<persName ref="#SLK">Sarah L. Ketchley</persName>
+					</respStmt>
+			</titleStmt>
+			 
+			<extent>approx. 200 kilobytes</extent>
+			 
+			<publicationStmt>
+
+				<publisher>Newbook Digital Texts.
+				   <address>
+					  <addrLine n="1">Department of Near Eastern Languages and Civilization</addrLine>
+					  <addrLine n="2">University of Washington</addrLine>
+					  <addrLine n="3">229 Denny Hall, Box 353120</addrLine>
+					  <addrLine n="4">Seattle, WA 98195</addrLine>
+				   </address>
+				</publisher>
+
+				<pubPlace>Seattle, WA</pubPlace>
+
+				<!-- 
+				The <idno> element is only required for documents with a standard id number
+				such as a library call number.
+				-->
+
+				<availability>
+				   <p>The Emma B. Andrews diary is the property of the Metropolitan Museum of Art, New York and the American Philosophical Society, Philadelphia.</p>
+				   <p xml:id="CreativeCommons">
+					  <![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0  License</a>.<br/>
+					  This license does not transfer any rights regarding material used in the edition by permission of a third party.]]>
+				   </p>
+				</availability>
+				
+				<date>2014-12-13</date>
+
+			 </publicationStmt>
+			 
+			<sourceDesc> 
+				<biblFull>
+
+					<titleStmt>
+
+					  <!--
+					  The "level" attribute "indicates whether this is the title of an article, book, journal, 
+					  series, or unpublished material, indicated as a, b, j, s, or u" (TEI P4X, ch. 5.2.1).
+					  -->
+					  <title level="u">A Journal on the Bedawin</title>
+
+					  <author>Emma Buttles Andrews (1837 - 1922)</author>
+
+					</titleStmt>
+
+				   <!-- 
+						The <extent> element indicates the size of your source document, in whatever 
+						units are appropriate (usually pages; for example, 2 pp.) 
+					-->
+					<extent>9 pp.</extent>
+
+					<publicationStmt>
+					  <p>Publication statement.</p>
+					</publicationStmt>
+				   
+					<notesStmt>
+					  <!-- 
+						  TAKE NOTE: Your entire header should answer the following questions about your 
+						  source document. At this point in your header, you should discuss anything in 
+						  this list not mentioned elsewhere in the header.
+						 
+							1. What is the document (letter, will, etc.)?
+							2. What does it say about itself (titles, descriptive notes, etc.)?
+							3. What does it contain (no. of pages/sheets, enclosures, etc.)?
+							4. How is it put together (folded sheets, binding, etc.)?
+							5. What is it made of (paper, vellum, etc.)?
+							6. What is its size (i.e., physical dimensions)?
+							7. How is it packaged/contained (binding, envelope, folder, box, etc.)?
+							8. How is it related to other versions (original, copy, print history)?
+						 
+							You can use more than one paragraph (tagged <p> </p>).
+					   -->
+					  
+						<note type="descriptive" resp="ed">
+							 <!-- 
+							 We will use this note to describe the physical diary.
+							 -->
+							 <!-- <p>
+								<figure rend="embed">
+								   <head>Bookplate</head>
+								   <graphic url="insert URL to image of Bedawin bookplate"/>
+								   <figDesc>
+									  Bookplate located inside front cover of first volume of the edition housed in the Metropolitan Museum of Art.
+								   </figDesc>
+								</figure>
+								 V.19. Emma B. Andrews Diaries, 1889–1912</p>
+							 <p><emph rend="bold">Collation</emph>: ? mm x ? mm. 9 leaves. Unlined paste-down endpaper; [1-9] typewritten leaves, plain paper, entries from 21 Nov. 1912 through 16 Apr. 1913</p>
+							 <p><emph rend="bold">Paper</emph>: White plain paper. </p>
+							 -->
+						</note> 
+					  
+						<note type="introductory" resp="ed">
+							 <!-- 
+							 We will use this note to contain an historical/critical introduction to the
+							 text of the Andrews Diary.
+							 --> 
+							<p rend="h3">
+								Volume 19 Summary   
+							</p>
+							<p>The party spends a week in New York before departing on Saturday 16th November 1912. Their route to Egypt took them via Naples on the SS Berlin.  Accompanying Emma and Theodore were Mary Newberry and her daughter Doris on their first trip to Egypt, and the faithful manservant Daniel Jones.  The party met Harry Burton in Italy, before boarding the Prinz Heinrich for Egypt.  Emma alludes to Theodore’s ongoing decline in health.  The party spend  a week in Cairo sightseeing and catching up with old friends and colleagues. Emma takes Theodore to the Cairo Museum to visit Sir Gaston Maspero and discuss proposed repairs to the ‘magnificent cover to the so-called Tyii’s coffin’.  The piece has never been displayed, and Emma notes that it will make a fine addition to ‘Theodore’s exhibit at the Museum’.</p>  
+							<p>The party settles on board the ‘Beduin’, and the usual stream of guests begin to stop by for tea and conversation. Some of the regulars include Rev. Archibald Sayce. The journey south takes 10 days; they arrive in Luxor December 22 1912, where they are greeted by old friends including Mr Whymper, Mr. Erskine Nicol, Harry Burton and Mr. Lancelot Crane. Emma notes that Mr. Nicol paints a picture of the mountain range opposite Luxor - ‘the very best picture I ever saw of his’. She notes that Harry Burton is digging at Medinet Habu. Baron Von Bissing and his wife make regular appearances, while Maspero and Alan Gardiner visit the party.  Whilst in Luxor, the group and Jones spent three nights in the Valley, presumably in Davis’s Dig House.</p>   
+							<p>Emma’s comments are brief, almost terse, listing visitors and guests.  Her tone probably reflects the difficult circumstances with Davis.</p>
+							<p>The party continues south to Aswan in early March, battling high winds along the way.  Mary and Doris spent the time sightseeing, before turning around to head back north to Luxor and then back north again towards Cairo with a stop to visit Abydos en route.  The group check into the Ghezireh Palace Hotel in early April and Emma records that ‘the new bridge is finished, and trains are running over it. A very fine and long one- and a great convenience - but it spoils the garden somewhat. Cairo is fast changing and improving but losing its unique interesting eastern features,’  A week is spent entertaining guests, including Howard Carter, Albert Lythgoe and von Bissing again.  By mid-April the group land in Naples on their return journey, passing through Florence and visiting with Jeanette and Mary Buttles.  Theodore is taken out to drive daily by David Constantini and Harry Burton, accompanied by ‘some one or two of the girls’. The final entry is April 16th 1913, stating that the group will be leaving the next day for London.</p>
+						</note>
+
+					</notesStmt>
+				   
+				</biblFull>
+			   
+				<listPerson type="editors">
+					<head>Editors</head>
+					<person xml:id="SLK">
+						<persName>Ketchley, Sarah L.</persName>
+						<birth when="1968">
+							<placeName>Barton-on-Sea, UK</placeName>
+						</birth>
+						<education>BA, University of Birmingham,UK (1993)</education>
+						<education>PhD, University of Birmingham, UK (2004)</education>
+						<occupation>Egyptologist</occupation>
+						<nationality>U.K.</nationality>
+						<note type="biographical"> Sarah L. Ketchley is an Independent Scholar and Egyptologist based at the University of Washington, Seattle, WA. She is the co-founder of Newbook Digital Texts (http://depts.washington.edu/ndth/) with Professor Walter Andrews and Dr. Mary Childs. She is the Director of the Emma B. Andrews Digital Diary Project (www.emmabandrews.org). The projects have received funding from an NEH Digital Humanities Start-Up Grant, and a University of Washington Simpson Center Summer Funding award. She has collaborated with Professor Walter Andrews, Research Professor of Near Eastern Languages and Literature and Dr. Stacy Waters, specialist in Medieval English texts, mark-up languages and digitization fundamentals to develop a model of preservation for distributed, multimodal digital humanities projects.</note>
+					</person>
+				</listPerson>
+				   
+			   <!-- This work to complete. 1/21/15
+				Though TEI provides for more fine-grained encoding, we will enter bibliography items as we would expect them to be displayed, except for noting text that requires special
+				formatting (e.g., titles).
+				For example: 
+				
+			   <bibl>
+			   <head>Works Cited</head>
+			   <bibl xml:id="SmithA" n="SmithA">Smith, Archibald. <title level="m">The Autobiography of Archibald Smith, Plain Township Pioneer</title>. Ed. John E. Saveson. New
+				  Albany, Ohio: New Albany Plain Township Historical Society, 1999. Print.
+				</bibl>
+			   </listBibl> 
+			   -->
+			 </sourceDesc>
+			
+		</fileDesc> 
+			 
+
+		  <!--
+		  The encoding description, tagged <encodingDesc>, describes "the relationship 
+		  between an electronic text and its source or sources" (TEI P4X, ch. 5).
+		  -->
+		<encodingDesc>
+
+			<projectDesc>
+				<p>This edition is the produced under the auspices of Newbook Digital Texts, an independent publishing house established at the University of Washington with the goals of publishing a series of collaboratively produced electronic editions of previously unpublished and little-known manuscripts. These documentary editions are intended to provide wide exposure and access to manuscripts that might otherwise be difficult for scholars to discover and consult, and to provide users with a variety of tools for studying those texts. The first publishing project was the Alexander Svoboda Travel Journal. On the 15th of April, 1897, a 19 year-old European resident of Baghdad, named Alexander Richard Svoboda, set out on a long journey to Europe by caravan, boat and train. From a large and influential family of merchants, artists, and explorers settled in Ottoman Iraq since the end of the 18th century, Alexander traveled in the company of his parents and a departing British diplomat accompanied by his retinue. They followed a circuitous route through the Middle East to Cairo and thence to Europe on a three and a half month journey which Alexander described day-by-day in a journal written in the Iraqi Arabic of his time. </p>
+				<p>Each text was edited in connection with an undergraduate or graduate independent research internship offered
+				   by Dr. Sarah Ketchley, Visiting Scholar and Egyptologist at the University of Washington, and by Professor Walter Andrews, Research Professor of Near Eastern Languages and Civilization at the University of Washington. The
+				   courses provide students with an opportunity to explore issues of textuality
+				   and mediation that arise when our cultural archives spread from page to screen and
+				   from library shelves to networked databases. Electronic textual editing serves as our
+				   vehicle for examining what happens—and envisioning what might happen—when artifacts
+				   in one medium are represented in another medium, especially with regard to the
+				   interpretive work of reading. Electronic textual editions also provide a contact zone
+				   that can help us reflect on what manuscript, print, and "born digital" artifacts can
+				   tell us about their unique properties and their relationships to one another.</p>
+				<p>While providing a reliable textual edition is a <foreign xml:lang="lat">sine qua
+					  non</foreign>, the Smith edition also explores ways of telling four stories
+				   inextricably woven into our work: the lives and historical milieu evoked by the
+				   texts, the history of the physical journal (including its recent restoration), the
+				   editorial process that gave rise to this particular interpretation of the text, and
+				   the mediation of our electronic delivery system. </p>
+			</projectDesc>
+			<!--
+				In addition to prose description, the Editorial Practices Declaration may contain 
+				specialized elements concerned with correction, normalization, quotation, hyphenation, 
+				segmentation, date and number format, and interpretive apparatus (TEI P4X, ch. 5.3.3).
+			-->
+			<editorialDecl>
+				
+				<!-- 
+					TAKE NOTE: Explain your editorial method:
+					   
+					If you employ image files, describe how they were produced and note where they are stored.
+					Describe any editorial guidelines you followed (e.g., how you treated hyphenation, whether 
+					you corrected apparent errors, and any other decisions about how to treat recurrent features).
+					Describe any special symbols that you use in your text to indicate additions, corrections, 
+					cancellations, and so on. This important explanation provides a reader's guide to the text.
+
+					You can use more than one paragraph (tagged <p> </p>).
+
+					May include asset diagram and links to asset database.
+					 
+				-->
+
+				<p>
+				   <emph rend="bold">Conversion from Microfilm</emph>. The original hand-written diary is lost; a microfiche copy of a 1919 typewritten transcription was obtained from the American Philosophical Society, Philadelphia. The copy was originally owned by Herbert E. Winlock.  The microfiche pages were converted into PDFs which were our primary stream of source data.
+				</p>
+				<p>
+				   <emph rend="bold">Production Location of Digital Assets</emph>. The TEI P5-encoded
+				   transcription of the Andrews journal, along with XSL style sheets used to provide
+				   variant "views" of the edition, TEI ODD documents used to produce custom schemas
+				   based on the TEI markup language, and the resulting schemas are stored on a server
+				   hosted by the University of Washington and in a Github repository. Readers may download copies of those source files via a link at the
+				   top of this page. 
+				   The files constituting the project's Web site are stored on a Web server</p>
+				<p>
+				   <emph rend="bold">Archiving of Digital Assets</emph>. Once the edition is complete,
+				   its digital assets will be archived in an online digital repository.
+				</p>
+
+			</editorialDecl>
+			 
+				<!-- <p>
+
+					NOTE: Update to include informationa about TEI ODD files.  
+					<emph rend="bold">Customization of the TEI P5 Schema</emph>. Customization consisted primarily of restricting
+					encoding to certain modules and elements as well as enforcing some attribute values. See the ODD file for 
+					complete details.
+				</p> -->
+				
+			
+		   
+		</encodingDesc>
+		<profileDesc>
+			 
+			<!--
+				The text profile, tagged profileDesc, contains "provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting." (TEI P5.2.7.0, ch. 2.4).
+			-->
+
+			<creation>
+				<date>2014-12-14</date>
+			</creation>
+
+
+			<!-- Note any languages that appear in your document (use multiple tags, if necessary). -->
+			<langUsage>
+				<language ident="eng">English</language>
+			</langUsage>
+
+			<textClass>
+				<!-- 
+					Supply a list of keywords for your document from the Library of Congress Subject Headings
+				-->
+				<keywords scheme="#EBA">
+					<term>Diaries</term>
+					<term>Archaeology--Egypt</term>
+					<term>Egyptology</term>
+					<term>Egypt--Antiquities</term>
+					<term>Egypt--Description and travel</term>
+					<term>Italy--Description and travel</term>
+					<term>Luxor (Egypt)--Antiquities</term>
+					<term>Nile River--Description and travel</term>
+				</keywords>
+
+			</textClass>
+		</profileDesc>
+
+		<revisionDesc>
+
+			<!--
+				The revision history, tagged revisionDesc, allows "the encoder to provide a history of 
+				changes made during the development of the electronic text" (TEI P4X, ch. 5).
+				Add additional changes at the top of the list.
+			-->
+			<change when="2015-1-22" who="Editors">Released a public working draft of the edition.</change>
+
+		</revisionDesc>
+
+	</teiHeader>
+     <text>
+        <body>
+            <pb n="105"/>
+            <div xml:id="EBA19121121" type="Entry">
+                <p><title>Nov. 21. 1912.</title></p>
+                <p>After a hurried and tiring week spent in New York at that perfect hotel, the St.
+                    Dennis, we sailed on Saturday the 16, for Egypt via Naples on that ship well
+                    known to us, the "Berlin", on which we have crossed for two years. Only, this
+                    time I was not upstairs in the Captain’s room as usual. We have <persName
+                        ref="Newberry_Mary">Mary Newberry</persName> and her daughter, <persName
+                        ref="Newberry_Doris">Doris</persName>, with us, making their first
+                    acquaintance with these southern waters. But we are unfortunate - for our second
+                    day out was bad - the wind and sea increasing in violence, and for 24 hours it
+                    was terrific - it is now better, but the rain and mist continue, and we have
+                    only caught a glimpse of the Azores - which we are now passing.</p>
+            </div>
+            <div xml:id="EBA19121124" type="Entry">
+                <p><title>Sunday. Nov. 24th.</title></p>
+                <p>We dropped our anchor about 2 o’clock at Gibraltar. Most of the passengers went
+                    ashore, <persName ref="Jones_Daniel">Jones</persName> guiding <persName
+                        ref="Newberry_Mary">Mary</persName> and <persName ref="Newberry_Doris"
+                        >Doris</persName>. They were duly impressed and charmed. We were soon off -
+                    it growing wilder as we got well into the Mediterranean.</p>
+            </div>
+            <div xml:id="EBA19121126" type="Entry">
+                <p><title>Tuesday. Nov. 26th.</title></p>
+                <p>Reached Algiers after dark - many went ashore - mild and lovely.</p>
+            </div>
+            <pb n="106"/>
+            <div xml:id="EBA19121127" type="Entry">
+                <p><title>Wednesday. <sic>Oct.</sic> 27th.</title></p>
+                <p>Arrived at noon today - found <persName ref="Burton_Harry">Harry</persName>
+                    waiting for us. The pleasant old appartment at the Grand Hotel - a tea at
+                    Bertolini’s - and off in the Prinz Heinrick for Egypt on Friday - a very smooth
+                    passage over a summer sea, and Egypt at last, and once again. How glad we were
+                    for <persName ref="Davis_Theodore">Theodore's</persName> sake - and he was so
+                    happy to find himself once more here!</p>
+            </div>
+            <div xml:id="EBA19121211" type="Entry">
+                <p><title>Dahabya Beduin. Dec. 11th.</title></p>
+                <p>We are now established on our boat - waiting for our tug - which should arrive in
+                    the morning. How pleasant it is! after a whole month from home spent in hotels
+                    and steamers! It has been a busy week in Cairo - <persName ref="Newberry_Mary"
+                        >Mary</persName> and <persName ref="Newberry_Doris">Doris</persName> have
+                    been sightseeing and motoring about. I have been once to the Museum making a
+                    visit to <persName ref="Maspero_Gaston">Sir Gaston Maspero </persName>with
+                        <persName ref="Davis_Theodore">Theo</persName>. We spoke of the magnificent
+                    cover to the so-called <persName ref="Tiye">Tyii's</persName> coffin which has
+                    never been shown to the public and is kept entirely apart in a private room. A
+                    man capable of repairing it has been found, and has agreed to do the whole thing
+                    and to finish it within 5 months. The gold work, as well as the exquisite
+                        <emph>inlay</emph> - it will be a grand addition to <persName
+                        ref="Davis_Theodore">Theodore's</persName> exhibit at the Museum. We had
+                    quite a little tea party on Sunday afternoon, on the boat. <persName
+                        ref="Sayce_Archibald">Mr. Sayce</persName>, <persName ref="Pasha_Artin"
+                        >Artin Pasha</persName>, <persName ref="Labib_Claudius">Claudius
+                        Bey</persName> and <persName ref="Leavitt_Mr">the young Leavitts</persName>.
+                        <persName ref="Sayce_Archibald">Mr. Sayce</persName> is on his way to India.
+                    We gave a morning to the zoo - and generally a lot of sight seeing.</p>
+            </div>
+            <pb n="107"/>
+            <div xml:id="EBA19121221" type="Entry">
+                <p><title>Saturday. Dec. 21.</title></p>
+                <p>We arrived about noon today - after a pleasant and successful voyage of 10 days -
+                    one day of showers - clearing with most beautiful rainbow. We have several fine
+                    new sailors - young men - making a fine crew - of course our tug was a good
+                    strong one, making a fast voyage. We find several friends here - <persName
+                        ref="Whymper_Charles">Mr. Whymper</persName>, <persName
+                        ref="Villamarina_Contessa_di">Contessa di Villamarina</persName>, <persName
+                        ref="Pier_Mr">Mr. and Mrs. Pier</persName>, and their 2 heavenly little
+                    girls - <persName ref="Buchanan_Carrie">Miss Buchanan</persName> fortunately for
+                    2 days. She is now at the head of the American College for girls in Cairo. On
+                    the 24th the Serapis arrived with <persName ref="Tuck_Mr">Mr. and Mrs.
+                        Tuck</persName> of Paris, <persName ref="Curley_Major">Major
+                        Curley</persName> of Newport, <persName ref="Nelson_Miss">Miss
+                        Nelson</persName> and <persName ref="Morgan_Miss">Miss Morgan</persName>,
+                    niece of <persName ref="Tuck_Mr">Mr. Tuck</persName>. They and <persName
+                        ref="Nicol_Erskine">Mr. Nicol</persName> were here to tea on Christmas day,
+                    and <persName ref="Burton_Harry">Harry Burton</persName> and <persName
+                        ref="Crane_Lancelot">Mr. Crane</persName> to lunch.</p>
+            </div>
+            <div xml:id="EBA19121227" type="Entry">
+                <p><title>Friday. Dec. 27th.</title></p>
+                <p>We all - four of us, and <persName ref="Jones_Daniel">Jones</persName> went over
+                    to the Valley, and stayed 3 days - and had a jolly visit. <persName
+                        ref="James_Arthur">Mr. and Mrs. Arthur James</persName> of Newport, who
+                    sailed from there on their yacht, the "Aloha" just before we left, arrived on
+                    the "Hyksos" came to tea. They were so pleased with our boat. They are going to
+                    join their yacht again at Mombasa for the return home.</p>
+            </div>
+            <div xml:id="EBA19130101" type="Entry">
+                <p><title>Wednesday. Jan. 1st.</title></p>
+                <p><persName ref="Whymper_Charles">Mr. Whymper</persName> came to breakfast and
+                    brought us all the news of Luxor.</p>
+            </div>
+            <pb n="108"/>
+            <div xml:id="EBA19130102" type="Entry">
+                <p><title>Thursday. Jan. 2nd.</title></p>
+                <p><persName ref="Villamarina_Contessa_di">Contessa di Villamarina</persName> and
+                        <persName ref="Tremaine_Mr">Mr. <sic>Trevaine</sic></persName> came to tea -
+                        <persName ref="Bissing_Baron_von">Baron and Baroness v. Bissing</persName>
+                    are lying in their boat, just behind us - and <persName ref="Newberry_Mary"
+                        >Mary</persName> and I went to tea with them last evening.</p>
+            </div>
+            <div xml:id="EBA19130103" type="Entry">
+                <p><title>Saturday. Jan. 3rd.</title></p>
+                <p><persName ref="Newberry_Mary">Mary</persName>, <persName ref="Newberry_Doris"
+                        >Doris</persName> and I crossed over and paid a visit to <persName
+                        ref="Nicol_Erskine">Mr. Nicol</persName>. He has the very best picture I
+                    ever saw of his - the wonderful mountain range opposite Luxor - the finest view
+                    in all Egypt I think. He says he painted it for me - but <persName ref="Pier_Mr"
+                        >Mr. and Mrs. Pier</persName> who were here to lunch, say that they are to
+                    have it.</p>
+            </div>
+            <div xml:id="EBA19130106" type="Entry">
+                <p><title>Monday. Jan. 6th.</title></p>
+                <p><persName ref="Bissing_Baron_von">The v. Bissings</persName> were here to tea -
+                    and <persName ref="Nicol_Erskine">Mr. Nicol</persName> dined with us.</p>
+            </div>
+            <div xml:id="EBA19130107" type="Entry">
+                <p><title>Tuesday. Jan. 7th.</title></p>
+                <p>We have all been over to see <persName ref="Burton_Harry">Harry's</persName>
+                    diggings at Medinet Habu.</p>
+            </div>
+            <div xml:id="EBA19130112" type="Entry">
+                <p><title>Sunday. Jan. 12th.</title></p>
+                <p>We have had <persName ref="Bissing_Baron_von">Baron and Baroness v.
+                        Bissing</persName> to lunch, <persName ref="Ferroir_Miss">Miss
+                        Ferroir</persName> to tea and <persName ref="Downie_Miss">Miss
+                        Downie</persName> and <persName ref="Pier_Mr">the Piers</persName> to lunch
+                    this week. We have paid a visit to <persName ref="Fahnstock_Mr">the
+                        Fahnstocks</persName>, who are lying near. The weather is at last clear and
+                    warm.</p>
+            </div>
+            <pb n="109"/>
+            <div xml:id="EBA19130119" type="Entry">
+                <p><title>Sunday. Jan. 19.</title></p>
+                <p>We have had among other visitors this week, <persName ref="Hardy_Mr">the
+                        Hardys</persName> to tea, <persName ref="Maspero_Gaston">Sir
+                        Gaston</persName> and <persName ref="Maspero_Lady">Lady Maspero</persName>,
+                    and <persName ref="Sprague_Carleton">Mr. and Mrs. Carleton Sprague</persName>
+                    sent by <persName ref="Metcalf_Mrs">Mrs. Metcalf</persName>, and <persName
+                        ref="Marquand_Allen">Mr. Allen Marquand</persName>, windy and cold.</p>
+            </div>
+            <div xml:id="EBA19130126" type="Entry">
+                <p><title>Sunday. Jan. 26.</title></p>
+                <p>It has been warm and charming most of the week. We have had <persName
+                        ref="Villamarina_Contessa_di">the Contessa</persName> and <persName
+                        ref="Tremaine_Mr">Mr. Tremaine</persName>, <persName ref="Gardiner_Alan">Mr.
+                        Alan <sic>Gardner</sic></persName>, <persName ref="Longyear_Mr">Mr. and Mrs.
+                        Longyear</persName> and son on their homeward bound voyage from India,
+                        <persName ref="Fahnstock_Mr">Mr. Fahnstock</persName> to tea, <persName
+                        ref="Tremaine_Mr">Mr. Tremaine</persName> to lunch, and <persName
+                        ref="Whymper_Charles">Mr. Whymper</persName> to breakfast this week, to say
+                    nothing of a charming little white baby donkey, which one of the sailors brought
+                    on the lower deck, to amuse the <persName ref="Pier_Mr">Pier
+                    children</persName>. We have had some warm days.</p>
+            </div>
+            <div xml:id="EBA19130202" type="Entry">
+                <p><title>Sunday. Feb. 2nd.</title></p>
+                <p>Various visits from friends - we have lunched with <persName ref="Fahnstock_Mr"
+                        >the Fahnstocks</persName> and <persName ref="Maspero_Gaston"
+                        >Masperos</persName> - visits to the diggings etc - cold and windy.</p>
+            </div>
+            <div xml:id="EBA19130209" type="Entry">
+                <p><title>Sunday. Feb 9th.</title></p>
+                <p>It has been very warm - various visitors - among them <persName ref="Longyear_Mr"
+                        >the Longyears</persName> back from the South as far as Khartoum. <persName
+                        ref="Whymper_Charles">Mr. Whymper</persName> to breakfast this morning.</p>
+            </div>
+            <div xml:id="EBA19130216" type="Entry">
+                <p><title>Sunday. Feb. 16th.</title></p>
+                <p>We dressed the ship on Wednesday - <persName ref="Lincoln_Abraham"
+                        >Lincoln's</persName> birthday - the <pb n="110"/>usual routine - this week
+                    - we have had light rain on one day and cold stormy weather since. <persName
+                        ref="Villamarina_Contessa_di">Contessa</persName> here for luncheon.</p>
+            </div>
+            <div xml:id="EBA19130223" type="Entry">
+                <p><title>Sunday. Feb. 23rd.</title></p>
+                <p>Very warm. <persName ref="Whymper_Charles">Mr. Whymper</persName> to breakfast -
+                        <persName ref="Pier_Mr">the Piers</persName> to lunch. <persName
+                        ref="Aylener_Mrs">Mrs. Aylener</persName> and <persName ref="Morehouse_Mr"
+                        >Morehouse</persName> to tea. We have had <persName ref="Hardy_Mr">Mr. and
+                        Mrs. Hardy</persName> to tea - <persName ref="Aldrich_Nelson">Senator
+                        Aldrich</persName> also. <persName ref="Newberry_Mary">Mary N.</persName>
+                    and I have been over to the Winter Palace for tea - we looked very smart on
+                        <persName ref="Washington_George">Washington's</persName> birthday with all
+                    our flags.</p>
+            </div>
+            <div xml:id="EBA19130302" type="Entry">
+                <p><title>Sunday. March 2nd.</title></p>
+                <p>On Monday <persName ref="Newberry_Mary">Mary</persName> and I went to tea with
+                        <persName ref="Villamarina_Contessa_di">the Contessa</persName> in the
+                    gardens of the Luxor Hotel - met <persName ref="Baring_Lady">Lady
+                        Baring</persName>, <persName ref="Murray_Miss">Miss Murray</persName>, and
+                        <persName ref="Pappenheim_Contessa">Contessa Pappenheim</persName> and
+                    daughter. Charming people all - yesterday we left for Aswân.</p>
+            </div>
+            <div xml:id="EBA19130309" type="Entry">
+                <p><title>Sunday. March 9th.</title></p>
+                <p>This is our record for the week - very high wind from the time we left Luxor.
+                    Stopped at Edfou - Kom Ombo - where we were held some time by furious wind -
+                    after leaving we passed the most wonderful mass of flamingoes - absolutely dense
+                    masses of them - attending a mile or two - very remarkable - reached Aswan the
+                    4th. The wind horridly bad. <persName ref="Newberry_Mary">Mary</persName> and
+                        <persName ref="Newberry_Doris">Doris</persName> went to Barrage - the next
+                    day we moved down opposite <persName ref="Grenfell_Bernard"
+                        >Grenfell's</persName> tomb, and the girls visited them. The 7th we left
+                    Aswân, the terrific wind still holding - so that we were tied up some time <pb
+                        n="111"/>below Kom Ombo - the next day we stuck upon 3 sand banks, or rather
+                    our tug did - and reached here this morning.</p>
+            </div>
+            <div xml:id="EBA19130316" type="Entry">
+                <p><title>Sunday. Mar. 16th.</title></p>
+                <p>We spent the days Monday and Tuesday in Luxor - <persName ref="Newberry_Doris"
+                        >Doris</persName> and I went over to the town - and <persName
+                        ref="Crispell_Mrs">Mrs. Crispell</persName> and her niece came from the
+                    Mayflower to tea - I was so pleased with her. <persName ref="Crane_Lancelot">Mr.
+                        Crane</persName> and <persName ref="Burton_Harry">Harry</persName> came to
+                    tea, and we left Luxor the 12th at noon - having had a nice visit from <persName
+                        ref="Mahassib_Hagg">Old Hagg Mahassib</persName> - Nag Hamadi the 13 -
+                    Balliana the 14 - where we stopped for <persName ref="Newberry_Mary"
+                        >Mary</persName>, <persName ref="Newberry_Doris">Doris</persName>, <persName
+                        ref="Amelie">Amelie</persName>, <persName ref="Jones_Daniel"
+                        >Jones</persName> and <persName ref="Hassein">Hassein</persName> to visit
+                    Abydos - very cold and terrific wind - very severe in the night and rough today.
+                    We passed the Arabia stuck at 8:30 -A.M. Cold, constant wind.</p>
+            </div>
+            <div xml:id="EBA19130402" type="Entry">
+                <p><title>Wednesday. April 2nd.</title></p>
+                <p>We left the boat very reluctantly several days ago, that charming little home,
+                    and came to the Ghizereh Palace Hotel - and into our old rooms. Hotel almost
+                    empty. The new bridge is finished, and trains are running over it. A very fine
+                    and long one - and a great convenience - but it spoils the garden somewhat.
+                    Cairo is fast changing and improving but losing its unique interesting eastern
+                    features. <persName ref="Graham_Mrs">Mrs. Graham</persName> called with
+                        <persName ref="Watson_Major">Major Watson</persName> and asked us to tea on
+                    Friday and very pleasant it was, as always. <persName ref="Tremaine_Mr">Mr.
+                        Tremaine</persName> and <persName ref="Carter_Howard">Mr. Carter</persName>
+                    called.</p>
+            </div>
+            <pb n="112"/>
+            <div xml:id="EBA19130406" type="Entry">
+                <p><title>Sunday. April 6th.</title></p>
+                <p>Home all day - <persName ref="Bissing_Baron_von">Baron v. Bissing</persName>
+                    called and stopped for tea. <persName ref="Villamarina_Contessa_di">Contessa
+                        Villamarina</persName> and <persName ref="Johannis_Mlle">Mlle.
+                        Johannis</persName> too.</p>
+            </div>
+            <div xml:id="EBA19130407" type="Entry">
+                <p><title>Monday. April 7th.</title></p>
+                <p><persName ref="Rathbone_Elena">Elena Rathbone</persName> and her friend <persName
+                        ref="Cholanley_Miss">Miss Cholanley</persName> just back from India came to
+                    tea, as well as <persName ref="Anthony_Mr">Mr. Anthony</persName> and <persName
+                        ref="Lythgoe_Albert">Mr. Lythgoe</persName>.</p>
+            </div>
+            <div xml:id="EBA19130412" type="Entry">
+                <p><title>Saturday. April 12th.</title></p>
+                <p>Arrived in Naples at 7:30 this morning, landed in the hideous confusion
+                    characteristic of the N.G.L. steamers - rain and cold winds.</p>
+            </div>
+            <div xml:id="EBA19130416" type="Entry">
+                <p><title>Wednesday. April 16th.</title></p>
+                <p>Came to Florence - a long days journey - very cold. Vesuvius and the mountains
+                    all this way up, covered with snow. We came to the Grande Bretagne and to our
+                    old appartment - we have had a little fire every day. Theo has been almost every
+                    day motoring, with <persName ref="Costantini_David">David Costantini</persName>
+                    and <persName ref="Burton_Harry">Harry Burton</persName>, and some one or two of
+                    the girls. The season is very backward - the roses just beginning to show. Have
+                    made some pleasant visits - <persName ref="Davis_Theodore">Theo</persName> has
+                    made excursions to Faenza, Settignano - Volterra and enjoyed it keenly. He has
+                    loved going to the Villino and hearing <persName ref="Buttles_Jeanette"
+                        >Nettie</persName> sing - and to drive to the Cascine for a walk along the
+                    little river, with its lovely entourage of blue mountains and green meadows and
+                    magnificent trees. Above all I have enjoyed the companion-<pb n="113"/>ship of
+                    the two dear nieces, <persName ref="Buttles_Jeanette">Nettie</persName> and
+                        <persName ref="Buttles_Mary">Mary</persName>. We go tomorrow at 5 P.M. via
+                    the Mt. Cenie pass to London.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
